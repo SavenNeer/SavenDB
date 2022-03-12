@@ -1,0 +1,16 @@
+//没有表存在
+no such table: S
+
+//单个属性的UNIQUE错误(可能来自主码的UNIQUE属性)
+UNIQUE constraint failed: S.SNO
+
+//单个属性NOT NULL错误
+NOT NULL constraint failed: S.SNAME
+
+//虽然同时错了主码和非主属性的UNIQUE 但是系统只是提示了非主属性的UNIQUE
+UNIQUE constraint failed: S.STATUS
+
+//check约束的错误
+CHECK constraint failed: STATUS<=20
+
+
