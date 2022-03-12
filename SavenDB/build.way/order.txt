@@ -1,0 +1,20 @@
+cd /home/ubuntu/DBpro4/SavenDB/
+
+# cmd.cpp
+cd cmd.module/ && g++ -c cmd.cpp && mv cmd.o ../main.module/
+
+# utils.cpp
+cd include/ && g++ -c utils.cpp && mv utils.o ../main.module/
+
+# sql_grant.cpp
+cd right.module/ && g++ -c sql_grant.cpp && mv sql_grant.o ../main.module/
+
+# dbuser.cpp
+cd user.module/ && g++ -c dbuser.cpp && mv dbuser.o ../main.module/
+
+# sql_view.cpp
+cd view.module/ && g++ -c sql_view.cpp && mv sql_view.o ../main.module/
+
+# main.cpp
+g++ main.cpp cmd.o dbuser.o sql_grant.o utils.o -o test1 /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.65.1
+

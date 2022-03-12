@@ -1,0 +1,10 @@
+cym _sys_user _vld
+
+root _sys_user _vld
+root tablename select update delete insert create drop
+
+savenneer _sys_user _vld
+
+# grant update on tablename to cym;
+# grant update,delete on tablename,work to cym;
+# revoke delete on tablename from cym;
